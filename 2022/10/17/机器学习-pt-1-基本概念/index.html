@@ -16,37 +16,24 @@
   <meta name="author" content="MK">
   <meta name="keywords" content="">
   
-    <meta name="description" content="台大李宏毅老师的机器学习课程学习笔记 视频资源：BV1Wv411h7kN   机器学习的定义 机器学习：让机器具备寻找“函数”的能力  eg：语音识别、图片识别，找到一个“对应”   “函数”的分类 回归 regression：输出是数值（scalar）的函数，输入可以是一些相关的指数 分类 classification：从给定的类别中选择并输出类别  alphago本质上是分类问题  stru">
+    <meta name="description" content="什么是机器学习和深度学习？机器学习的基本步骤是什么？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习 pt.1 基本概念">
+<meta property="og:title" content="机器学习 lecture1 基本概念">
 <meta property="og:url" content="http://eskildmk.github.io/2022/10/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pt-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Eskild&#39;s Whispers">
-<meta property="og:description" content="台大李宏毅老师的机器学习课程学习笔记 视频资源：BV1Wv411h7kN   机器学习的定义 机器学习：让机器具备寻找“函数”的能力  eg：语音识别、图片识别，找到一个“对应”   “函数”的分类 回归 regression：输出是数值（scalar）的函数，输入可以是一些相关的指数 分类 classification：从给定的类别中选择并输出类别  alphago本质上是分类问题  stru">
+<meta property="og:description" content="什么是机器学习和深度学习？机器学习的基本步骤是什么？">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018153531.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018154520.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018155613.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162704.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162735.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162420.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163043.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163242.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018164706.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018185800.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190413.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190547.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018191229.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018192127.png">
+<meta property="og:image" content="http://eskildmk.github.io/img/lecture1.png">
 <meta property="article:published_time" content="2022-10-17T06:18:34.000Z">
-<meta property="article:modified_time" content="2022-10-18T11:45:03.945Z">
+<meta property="article:modified_time" content="2022-10-18T12:55:42.221Z">
 <meta property="article:author" content="MK">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018153531.png">
+<meta name="twitter:image" content="http://eskildmk.github.io/img/lecture1.png">
   
   
   
-  <title>机器学习 pt.1 基本概念 - Eskild&#39;s Whispers</title>
+  <title>机器学习 lecture1 基本概念 - Eskild&#39;s Whispers</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -98,9 +85,7 @@
 
   
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
@@ -196,7 +181,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="机器学习 pt.1 基本概念"></span>
+            <span id="subtitle" data-typed-text="机器学习 lecture1 基本概念"></span>
           
         </div>
 
@@ -219,7 +204,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          1.6k 字
         
       </span>
     
@@ -230,7 +215,7 @@
         
         
         
-          17 分钟
+          14 分钟
         
       </span>
     
@@ -268,7 +253,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">机器学习 pt.1 基本概念</h1>
+            <h1 style="display: none">机器学习 lecture1 基本概念</h1>
             
             
               <div class="markdown-body">
@@ -277,126 +262,110 @@
 <p>台大李宏毅老师的机器学习课程学习笔记</p>
 <p><strong>视频资源</strong>：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wv411h7kN">BV1Wv411h7kN</a></p>
 </blockquote>
-<h2 id="机器学习的定义"><a class="markdownIt-Anchor" href="#机器学习的定义"></a> 机器学习的定义</h2>
-<p>机器学习：让机器具备寻找“函数”的能力</p>
+<h2 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h2><p>机器学习：让机器具备寻找“函数”的能力</p>
 <blockquote>
 <p>eg：语音识别、图片识别，找到一个“对应”</p>
 </blockquote>
-<h2 id="函数的分类"><a class="markdownIt-Anchor" href="#函数的分类"></a> “函数”的分类</h2>
-<p><strong>回归 regression</strong>：输出是数值（scalar）的函数，输入可以是一些相关的指数</p>
+<h2 id="“函数”的分类"><a href="#“函数”的分类" class="headerlink" title="“函数”的分类"></a>“函数”的分类</h2><p><strong>回归 regression</strong>：输出是数值（scalar）的函数，输入可以是一些相关的指数</p>
 <p><strong>分类 classification</strong>：从给定的类别中选择并输出类别</p>
 <blockquote>
 <p>alphago本质上是分类问题</p>
 </blockquote>
 <p><strong>structured learning</strong>：创造结构化的新内容</p>
-<h2 id="简单机器学习的步骤"><a class="markdownIt-Anchor" href="#简单机器学习的步骤"></a> 简单机器学习的步骤</h2>
-<ol>
-<li>
-<p>写出带有未知参数的函数</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>w</mi><msub><mi>x</mi><mn>1</mn></msub><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>m</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">y=b+wx_{1}\ \ ···\ model</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mspace"> </span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span><br />
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>f</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">\\ x, y\ \ ···\ feature</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace"> </span><span class="mspace"> </span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span></span></span></span><br />
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>w</mi><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\\ w\ \ ···\ weight</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mspace"> </span><span class="mspace"> </span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">e</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span></span><br />
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mi>b</mi><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>b</mi><mi>i</mi><mi>a</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\\ b\ \ ···\ bias</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span><span class="mspace"> </span><span class="mspace"> </span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal">i</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span></span></span></span></p>
+<h2 id="简单机器学习的步骤"><a href="#简单机器学习的步骤" class="headerlink" title="简单机器学习的步骤"></a>简单机器学习的步骤</h2><ol>
+<li><p>写出带有未知参数的函数</p>
+<p>$y=b+wx_{1}\ \ ···\ model$<br>$\\ x, y\ \ ···\ feature$<br>$\\ w\ \ ···\ weight$<br>$\\ b\ \ ···\ bias$</p>
 <ul>
 <li>based on domain knowledge</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 就是未知参数</li>
+<li>$w$ 和 $b$ 就是未知参数</li>
 </ul>
 </li>
-<li>
-<p>通过训练数据定义损失函数</p>
+<li><p>通过训练数据定义损失函数</p>
 <p>loss is a function of parameters</p>
 <ul>
-<li>
-<p>常见的损失函数</p>
+<li><p>常见的损失函数</p>
 <blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mi>n</mi></munder><msub><mi>e</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">L=\frac{1}{N}\sum\limits_{n}e_{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.795113em;vertical-align:-0.950005em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.750005em;"><span style="top:-2.149995em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.950005em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p><span class='katex-error' title='ParseError: KaTeX parse error: Can&#039;t use function &#039;\^&#039; in math mode at position 6: e=|y-\̲^̲{y}|\ \ ···\ MA…'>e=|y-\^{y}|\ \ ···\ MAE</span></p>
-<p><span class='katex-error' title='ParseError: KaTeX parse error: Can&#039;t use function &#039;\^&#039; in math mode at position 7: e={(y-\̲^̲{y})}^{2}\ \ ··…'>e={(y-\^{y})}^{2}\ \ ···\ MSE</span><br />
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 和 <span class='katex-error' title='ParseError: KaTeX parse error: Can&#039;t use function &#039;\^&#039; in math mode at position 1: \̲^̲{y}'>\^{y}</span> 是概率时使用交叉熵</p>
+<p>$L=\frac{1}{N}\sum\limits_{n}e_{n}$ </p>
+<p>$e=|y-\hat{y}|\ \ ···\ MAE$ </p>
+<p>$e={(y-\hat{y})}^{2}\ \ ···\ MSE$ </p>
+<p>$y$ 和 $\^{y}$ 是概率时使用交叉熵</p>
 </blockquote>
 </li>
-<li>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018153531.png" srcset="/img/loading.gif" lazyload alt="20221018153531" /></p>
+<li><p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018153531.png" srcset="/img/loading.gif" lazyload alt="20221018153531"></p>
 </li>
 </ul>
 </li>
-<li>
-<p>最佳化——梯度下降法</p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018154520.png" srcset="/img/loading.gif" lazyload alt="20221018154520" /></p>
+<li><p>最佳化——梯度下降法</p>
+<p> $w^{*}, b^{*} = arg \min\limits_{w,b}L$</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018154520.png" srcset="/img/loading.gif" lazyload alt="20221018154520"></p>
 <ul>
-<li>存在全局最优和局部最优的问题（但其实无关紧要——<strong>“does local minima truly cause the problem?”</strong>）</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>w</mi><mo lspace="0em" rspace="0em">∗</mo></msup><mo separator="true">,</mo><msup><mi>b</mi><mo lspace="0em" rspace="0em">∗</mo></msup><mo>=</mo><mi>a</mi><mi>r</mi><mi>g</mi><munder><mo><mi>min</mi><mo>⁡</mo></mo><mrow><mi>w</mi><mo separator="true">,</mo><mi>b</mi></mrow></munder><mi>c</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">w^{*},b^{*}=arg \mathop{\min}\limits_{w,b} c L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.5715459999999999em;vertical-align:-0.8882159999999999em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-2.3478920000000003em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop"><span class="mop">min</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8882159999999999em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">L</span></span></span></span></li>
-<li><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018155613.png" srcset="/img/loading.gif" lazyload alt="20221018155613" /></li>
+<li><p>存在全局最优和局部最优的问题（但其实无关紧要——<strong>“does local minima truly cause the problem?”</strong>）</p>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018155613.png" srcset="/img/loading.gif" lazyload alt="20221018155613"></p>
+</li>
 </ul>
 </li>
 </ol>
-<h2 id="深度学习更复杂的情况"><a class="markdownIt-Anchor" href="#深度学习更复杂的情况"></a> 深度学习：更复杂的情况</h2>
-<p><strong>model bias</strong>：linear models are too simple… we need more sophiscated models</p>
+<h2 id="深度学习：更复杂的情况"><a href="#深度学习：更复杂的情况" class="headerlink" title="深度学习：更复杂的情况"></a>深度学习：更复杂的情况</h2><p><strong>model bias</strong>：linear models are too simple… we need more sophiscated models</p>
 <ul>
-<li>
-<p>如何拟合复杂的曲线函数？</p>
+<li><p>如何拟合复杂的曲线函数？</p>
 <blockquote>
 <p>通过一个常数与多个简单折线和来进行拟合，就可以拟合较为复杂的折线（<strong>piecewise linear curve</strong>）</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162704.png" srcset="/img/loading.gif" lazyload alt="20221018162704" /></p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162704.png" srcset="/img/loading.gif" lazyload alt="20221018162704"> </p>
 <blockquote>
 <p>而任何复杂的曲线都可以用若干的分段线性函数来拟合。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162735.png" srcset="/img/loading.gif" lazyload alt="20221018162735" /></p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162735.png" srcset="/img/loading.gif" lazyload alt="20221018162735"></p>
 </li>
-<li>
-<p>那如何表示简单折线？（称简单函数为<strong>激活函数</strong>）</p>
+<li><p>那如何表示简单折线？（称简单函数为<strong>激活函数</strong>）</p>
 <blockquote>
 <p>使用sigmoid函数来拟合。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162420.png" srcset="/img/loading.gif" lazyload alt="20221018162420" /></p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162420.png" srcset="/img/loading.gif" lazyload alt="20221018162420"></p>
 <blockquote>
 <p>通过调整sigmoid函数的参数就可以改变简单折线的形状。</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163043.png" srcset="/img/loading.gif" lazyload alt="20221018163043" /></p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163043.png" srcset="/img/loading.gif" lazyload alt="20221018163043"></p>
 </li>
-<li>
-<p>最终……</p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163242.png" srcset="/img/loading.gif" lazyload alt="20221018163242" /></p>
+<li><p>最终……</p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163242.png" srcset="/img/loading.gif" lazyload alt="20221018163242"></p>
 </li>
 </ul>
-<h2 id="深度学习步骤"><a class="markdownIt-Anchor" href="#深度学习步骤"></a> 深度学习步骤</h2>
-<ol>
-<li>
-<p>写出带有位置参数的函数</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>b</mi><mo>+</mo><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>c</mi><mi>i</mi></msub><mtext> </mtext><mi>s</mi><mi>i</mi><mi>g</mi><mi>m</mi><mi>o</mi><mi>i</mi><mi>d</mi><mo stretchy="false">(</mo><msub><mi>b</mi><mi>i</mi></msub><mo>+</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>x</mi><mi>i</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y = b + \sum\limits_{i}c_{i}\ sigmoid(b_{i}+\sum\limits_{j}w_{ij}x{i})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.727674em;vertical-align:-0.977669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.750005em;"><span style="top:-2.122331em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.977669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">i</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.863782em;vertical-align:-1.113777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7500050000000001em;"><span style="top:-2.122331em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.113777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mord"><span class="mord mathnormal">i</span></span><span class="mclose">)</span></span></span></span>，用图像表示后结合线代化简得：</p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018164706.png" srcset="/img/loading.gif" lazyload alt="20221018164706" /></p>
+<h2 id="深度学习步骤"><a href="#深度学习步骤" class="headerlink" title="深度学习步骤"></a>深度学习步骤</h2><ol>
+<li><p>写出带有位置参数的函数</p>
+<p> $y = b + \sum\limits_{i}c_{i}\ sigmoid(b_{i}+\sum\limits_{j}w_{ij}x{i})$，用图像表示后结合线代化简得：</p>
+<p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018164706.png" srcset="/img/loading.gif" lazyload alt="20221018164706"></p>
 <blockquote>
 <p>由于使用多条sigmoid曲线对原曲线进行拟合，因此黑色层有多个节点，每个节点对应一条简单曲线；每条简单曲线反映的是y和所有x之间的关系（无法用二维平面内的曲线表示了，因为这里有多个自变量x），因此每个黑色节点会连接所有的x节点。</p>
 </blockquote>
-<p>向量形式的表示：</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>b</mi><mo>+</mo><msup><mtext mathvariant="bold">c</mtext><mi>T</mi></msup><mi>σ</mi><mo stretchy="false">(</mo><mtext mathvariant="bold">b</mtext><mo>+</mo><mtext mathvariant="bold">Wx</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y = b + \textbf{c}^{T} \sigma(\textbf{b} +\textbf{W}\textbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord textbf">c</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord text"><span class="mord textbf">b</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord textbf">W</span></span><span class="mord text"><span class="mord textbf">x</span></span><span class="mclose">)</span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="bold">x</mtext><mo stretchy="false">(</mo><mtext>向量</mtext><mo stretchy="false">)</mo><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>f</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">\textbf{x}(向量)\ \ ···\ feature</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord textbf">x</span></span><span class="mopen">(</span><span class="mord cjk_fallback">向</span><span class="mord cjk_fallback">量</span><span class="mclose">)</span><span class="mspace"> </span><span class="mspace"> </span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span></span></span></span><br />
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext mathvariant="bold">c</mtext><mi>T</mi></msup><mo stretchy="false">(</mo><mtext>向量</mtext><mo stretchy="false">)</mo><mo separator="true">,</mo><mtext mathvariant="bold">b</mtext><mo stretchy="false">(</mo><mtext>向量</mtext><mo stretchy="false">)</mo><mo separator="true">,</mo><mtext mathvariant="bold">W</mtext><mo stretchy="false">(</mo><mtext>矩阵</mtext><mo stretchy="false">)</mo><mo separator="true">,</mo><mtext>  </mtext><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mo separator="true">⋅</mo><mtext> </mtext><mi>u</mi><mi>n</mi><mi>k</mi><mi>n</mi><mi>o</mi><mi>w</mi><mi>n</mi><mtext> </mtext><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\textbf{c}^{T}(向量),\textbf{b}(向量),\textbf{W}(矩阵),\ \ ···\ unknown\ parameters</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord textbf">c</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord cjk_fallback">向</span><span class="mord cjk_fallback">量</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord textbf">b</span></span><span class="mopen">(</span><span class="mord cjk_fallback">向</span><span class="mord cjk_fallback">量</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord textbf">W</span></span><span class="mopen">(</span><span class="mord cjk_fallback">矩</span><span class="mord cjk_fallback">阵</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">⋅</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">n</span><span class="mspace"> </span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">s</span></span></span></span></p>
-<p><strong>还有一个没看懂的地方——<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span>到底是啥啊</strong></p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018185800.png" srcset="/img/loading.gif" lazyload alt="20221018185800" /></p>
+<p> 向量形式的表示：</p>
+<p> $y = b + \textbf{c}^{T} \sigma(\textbf{b} +\textbf{W}\textbf{x})$</p>
+<p> $\textbf{x}(向量)\ \ ···\ feature$<br> $\textbf{c}^{T}(向量),\textbf{b}(向量),\textbf{W}(矩阵)\ \ ···\ unknown\ parameters$</p>
+<p> <strong>还有一个没看懂的地方——$\theta$到底是啥啊</strong></p>
+<p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018185800.png" srcset="/img/loading.gif" lazyload alt="20221018185800"></p>
 </li>
-<li>
-<p>通过训练数据定义损失函数</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span></p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span>表示所有位置参数的组合</p>
+<li><p>通过训练数据定义损失函数</p>
+<p> $L(\theta)$，其中$\theta$表示所有位置参数的组合</p>
 </li>
-<li>
-<p>最佳化(反向传播)</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>θ</mi><mo lspace="0em" rspace="0em">∗</mo></msup><mo>=</mo><mi>a</mi><mi>r</mi><mi>g</mi><munder><mo><mi>min</mi><mo>⁡</mo></mo><mi>θ</mi></munder><mi>L</mi></mrow><annotation encoding="application/x-tex">\theta^{*} = arg \min\limits_{\theta}L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.435438em;vertical-align:-0.7521079999999999em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-2.347892em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">min</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7521079999999999em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">L</span></span></span></span></p>
-<p>由于这里的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span>真的变成了多元函数，所以求出的偏导向量也就真的变成了“梯度”用以下降:</p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190413.png" srcset="/img/loading.gif" lazyload alt="20221018190413" /><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190547.png" srcset="/img/loading.gif" lazyload alt="20221018190547" /></p>
+<li><p>最佳化(反向传播)</p>
+<p> $\theta^{*} = arg \min\limits_{\theta}L$</p>
+</li>
+</ol>
+<ul>
+<li><p>由于这里的$\theta$真的变成了多元函数，所以求出的偏导向量也就真的变成了“梯度”用以下降:</p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190413.png" srcset="/img/loading.gif" lazyload alt="20221018190413"><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190547.png" srcset="/img/loading.gif" lazyload alt="20221018190547"></p>
 <blockquote>
 <p>实际操作的时候，每次迭代计算损失函数的时候不会使用所有的样本数据，而是把大量数据分割成小块的数据(<strong>batch</strong>)，每个batch迭代一次，完成一轮遍历后记为一个<strong>epoch</strong>，一个epoch中有多少次迭代也是手动设置的超参</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018191229.png" srcset="/img/loading.gif" lazyload alt="20221018191229" /></p>
+<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018191229.png" srcset="/img/loading.gif" lazyload alt="20221018191229"></p>
 </li>
-</ol>
-<h2 id="再复杂一点"><a class="markdownIt-Anchor" href="#再复杂一点"></a> 再复杂一点……</h2>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018192127.png" srcset="/img/loading.gif" lazyload alt="20221018192127" /></p>
-<p>增加层数即可（层数也是超参 xs）</p>
-<h2 id="yeah-its-not-fancy-enough"><a class="markdownIt-Anchor" href="#yeah-its-not-fancy-enough"></a> Yeah, it’s not fancy enough</h2>
-<p>所以起一个炫酷的名字：</p>
+</ul>
+<h2 id="再复杂一点……"><a href="#再复杂一点……" class="headerlink" title="再复杂一点……"></a>再复杂一点……</h2><p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018192127.png" srcset="/img/loading.gif" lazyload alt="20221018192127"></p>
+<ul>
+<li>增加层数即可（层数也是超参 xs）</li>
+</ul>
+<h2 id="Yeah-it’s-not-fancy-enough"><a href="#Yeah-it’s-not-fancy-enough" class="headerlink" title="Yeah, it’s not fancy enough"></a>Yeah, it’s not fancy enough</h2><p>所以起一个炫酷的名字：</p>
 <p><strong>神经网络</strong></p>
 <p>然而神经网络也被玩烂了怎么办捏？</p>
 <p>那就叫<strong>深度学习</strong>吧。</p>
@@ -425,7 +394,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>机器学习 pt.1 基本概念</div>
+      <div>机器学习 lecture1 基本概念</div>
       <div>http://eskildmk.github.io/2022/10/17/机器学习-pt-1-基本概念/</div>
     </div>
     <div class="license-meta">
@@ -529,6 +498,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -696,6 +671,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
 
 
