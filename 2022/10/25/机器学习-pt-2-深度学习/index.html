@@ -16,24 +16,33 @@
   <meta name="author" content="MK">
   <meta name="keywords" content="">
   
-    <meta name="description" content="什么是机器学习和深度学习？机器学习的基本步骤是什么？">
+    <meta name="description" content="台大李宏毅老师的机器学习课程学习笔记 视频资源：BV1Wv411h7kN  framework of ML training data training function loss  opyimization   testing  model bias model is too simple make model more flexible: more features deep learnin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习 lecture1 基本概念">
-<meta property="og:url" content="http://eskildmk.github.io/2022/10/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pt-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:title" content="机器学习-pt-2-深度学习">
+<meta property="og:url" content="http://eskildmk.github.io/2022/10/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pt-2-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Eskild&#39;s Whispers">
-<meta property="og:description" content="什么是机器学习和深度学习？机器学习的基本步骤是什么？">
+<meta property="og:description" content="台大李宏毅老师的机器学习课程学习笔记 视频资源：BV1Wv411h7kN  framework of ML training data training function loss  opyimization   testing  model bias model is too simple make model more flexible: more features deep learnin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://eskildmk.github.io/img/lecture1.png">
-<meta property="article:published_time" content="2022-10-17T06:18:34.000Z">
-<meta property="article:modified_time" content="2022-10-18T12:55:42.221Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025125512.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025144426.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025150325.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025151653.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028180021.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028180520.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028195524.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028200000.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201019.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201749.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201923.png">
+<meta property="article:published_time" content="2022-10-25T04:39:21.000Z">
+<meta property="article:modified_time" content="2022-10-28T12:37:09.705Z">
 <meta property="article:author" content="MK">
-<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://eskildmk.github.io/img/lecture1.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025125512.png">
   
   
   
-  <title>机器学习 lecture1 基本概念 - Eskild&#39;s Whispers</title>
+  <title>机器学习-pt-2-深度学习 - Eskild&#39;s Whispers</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -181,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="机器学习 lecture1 基本概念"></span>
+            <span id="subtitle" data-typed-text="机器学习-pt-2-深度学习"></span>
           
         </div>
 
@@ -192,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-17 14:18" pubdate>
-          2022年10月17日 下午
+        <time datetime="2022-10-25 12:39" pubdate>
+          2022年10月25日 下午
         </time>
       </span>
     
@@ -204,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.4k 字
         
       </span>
     
@@ -215,7 +224,7 @@
         
         
         
-          14 分钟
+          12 分钟
         
       </span>
     
@@ -253,7 +262,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">机器学习 lecture1 基本概念</h1>
+            <h1 style="display: none">机器学习-pt-2-深度学习</h1>
             
             
               <div class="markdown-body">
@@ -262,115 +271,117 @@
 <p>台大李宏毅老师的机器学习课程学习笔记</p>
 <p><strong>视频资源</strong>：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wv411h7kN">BV1Wv411h7kN</a></p>
 </blockquote>
-<h2 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h2><p>机器学习：让机器具备寻找“函数”的能力</p>
-<blockquote>
-<p>eg：语音识别、图片识别，找到一个“对应”</p>
-</blockquote>
-<h2 id="“函数”的分类"><a href="#“函数”的分类" class="headerlink" title="“函数”的分类"></a>“函数”的分类</h2><p><strong>回归 regression</strong>：输出是数值（scalar）的函数，输入可以是一些相关的指数</p>
-<p><strong>分类 classification</strong>：从给定的类别中选择并输出类别</p>
-<blockquote>
-<p>alphago本质上是分类问题</p>
-</blockquote>
-<p><strong>structured learning</strong>：创造结构化的新内容</p>
-<h2 id="简单机器学习的步骤"><a href="#简单机器学习的步骤" class="headerlink" title="简单机器学习的步骤"></a>简单机器学习的步骤</h2><ol>
-<li><p>写出带有未知参数的函数</p>
-<p>$y=b+wx_{1}\ \ ···\ model$<br>$\\ x, y\ \ ···\ feature$<br>$\\ w\ \ ···\ weight$<br>$\\ b\ \ ···\ bias$</p>
-<ul>
-<li>based on domain knowledge</li>
-<li>$w$ 和 $b$ 就是未知参数</li>
+<h2 id="framework-of-ML"><a href="#framework-of-ML" class="headerlink" title="framework of ML"></a>framework of ML</h2><ul>
+<li>training data</li>
+<li>training<ul>
+<li>function</li>
+<li>loss </li>
+<li>opyimization</li>
 </ul>
 </li>
-<li><p>通过训练数据定义损失函数</p>
-<p>loss is a function of parameters</p>
-<ul>
-<li><p>常见的损失函数</p>
-<blockquote>
-<p>$L=\frac{1}{N}\sum\limits_{n}e_{n}$ </p>
-<p>$e=|y-\hat{y}|\ \ ···\ MAE$ </p>
-<p>$e={(y-\hat{y})}^{2}\ \ ···\ MSE$ </p>
-<p>$y$ 和 $\^{y}$ 是概率时使用交叉熵</p>
-</blockquote>
-</li>
-<li><p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018153531.png" srcset="/img/loading.gif" lazyload alt="20221018153531"></p>
-</li>
+<li>testing</li>
+</ul>
+<h3 id="model-bias"><a href="#model-bias" class="headerlink" title="model bias"></a>model bias</h3><ul>
+<li>model is too simple</li>
+<li>make model more flexible:<ul>
+<li>more features</li>
+<li>deep learning</li>
 </ul>
 </li>
-<li><p>最佳化——梯度下降法</p>
-<p> $w^{*}, b^{*} = arg \min\limits_{w,b}L$</p>
-<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018154520.png" srcset="/img/loading.gif" lazyload alt="20221018154520"></p>
-<ul>
-<li><p>存在全局最优和局部最优的问题（但其实无关紧要——<strong>“does local minima truly cause the problem?”</strong>）</p>
-</li>
-<li><p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018155613.png" srcset="/img/loading.gif" lazyload alt="20221018155613"></p>
-</li>
+</ul>
+<h3 id="optimization-issue"><a href="#optimization-issue" class="headerlink" title="optimization issue"></a>optimization issue</h3><ul>
+<li>gain the insights from cpmparison</li>
+<li>start from shallower networks, if deeper networks do not obtain smaller loss, then optimization issue</li>
+<li><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025125512.png" srcset="/img/loading.gif" lazyload alt="20221025125512"></li>
+</ul>
+<h3 id="overfitting"><a href="#overfitting" class="headerlink" title="overfitting"></a>overfitting</h3><ul>
+<li>small loss on training data, large loss on testing data</li>
+<li>more training data 即可</li>
+<li>data augmentation （创造资料，eg将图片左右翻转等）<ul>
+<li>不能随意创造，例如将图片上行下反转</li>
 </ul>
 </li>
-</ol>
-<h2 id="深度学习：更复杂的情况"><a href="#深度学习：更复杂的情况" class="headerlink" title="深度学习：更复杂的情况"></a>深度学习：更复杂的情况</h2><p><strong>model bias</strong>：linear models are too simple… we need more sophiscated models</p>
-<ul>
-<li><p>如何拟合复杂的曲线函数？</p>
-<blockquote>
-<p>通过一个常数与多个简单折线和来进行拟合，就可以拟合较为复杂的折线（<strong>piecewise linear curve</strong>）</p>
-</blockquote>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162704.png" srcset="/img/loading.gif" lazyload alt="20221018162704"> </p>
-<blockquote>
-<p>而任何复杂的曲线都可以用若干的分段线性函数来拟合。</p>
-</blockquote>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162735.png" srcset="/img/loading.gif" lazyload alt="20221018162735"></p>
-</li>
-<li><p>那如何表示简单折线？（称简单函数为<strong>激活函数</strong>）</p>
-<blockquote>
-<p>使用sigmoid函数来拟合。</p>
-</blockquote>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018162420.png" srcset="/img/loading.gif" lazyload alt="20221018162420"></p>
-<blockquote>
-<p>通过调整sigmoid函数的参数就可以改变简单折线的形状。</p>
-</blockquote>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163043.png" srcset="/img/loading.gif" lazyload alt="20221018163043"></p>
-</li>
-<li><p>最终……</p>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018163242.png" srcset="/img/loading.gif" lazyload alt="20221018163242"></p>
+<li>constrained model<ul>
+<li>eg. 直接限制为二次曲线</li>
+<li>less parameter, sharing parameter (CNN)</li>
+<li>less feature</li>
+<li>early stopping</li>
+<li>dropout</li>
+<li>regularization 正则化</li>
+<li>do not constrain too much -&gt; otherwise model bias</li>
+</ul>
 </li>
 </ul>
-<h2 id="深度学习步骤"><a href="#深度学习步骤" class="headerlink" title="深度学习步骤"></a>深度学习步骤</h2><ol>
-<li><p>写出带有位置参数的函数</p>
-<p> $y = b + \sum\limits_{i}c_{i}\ sigmoid(b_{i}+\sum\limits_{j}w_{ij}x{i})$，用图像表示后结合线代化简得：</p>
-<p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018164706.png" srcset="/img/loading.gif" lazyload alt="20221018164706"></p>
-<blockquote>
-<p>由于使用多条sigmoid曲线对原曲线进行拟合，因此黑色层有多个节点，每个节点对应一条简单曲线；每条简单曲线反映的是y和所有x之间的关系（无法用二维平面内的曲线表示了，因为这里有多个自变量x），因此每个黑色节点会连接所有的x节点。</p>
-</blockquote>
-<p> 向量形式的表示：</p>
-<p> $y = b + \textbf{c}^{T} \sigma(\textbf{b} +\textbf{W}\textbf{x})$</p>
-<p> $\textbf{x}(向量)\ \ ···\ feature$<br> $\textbf{c}^{T}(向量),\textbf{b}(向量),\textbf{W}(矩阵)\ \ ···\ unknown\ parameters$</p>
-<p> <strong>还有一个没看懂的地方——$\theta$到底是啥啊</strong></p>
-<p> <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018185800.png" srcset="/img/loading.gif" lazyload alt="20221018185800"></p>
-</li>
-<li><p>通过训练数据定义损失函数</p>
-<p> $L(\theta)$，其中$\theta$表示所有位置参数的组合</p>
-</li>
-<li><p>最佳化(反向传播)</p>
-<p> $\theta^{*} = arg \min\limits_{\theta}L$</p>
-</li>
-</ol>
+<h3 id="mismatch"><a href="#mismatch" class="headerlink" title="mismatch"></a>mismatch</h3><ul>
+<li>training and testing data have different distributions</li>
+</ul>
+<h2 id="optimization"><a href="#optimization" class="headerlink" title="optimization"></a>optimization</h2><ul>
+<li><p>critical point</p>
 <ul>
-<li><p>由于这里的$\theta$真的变成了多元函数，所以求出的偏导向量也就真的变成了“梯度”用以下降:</p>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190413.png" srcset="/img/loading.gif" lazyload alt="20221018190413"><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018190547.png" srcset="/img/loading.gif" lazyload alt="20221018190547"></p>
-<blockquote>
-<p>实际操作的时候，每次迭代计算损失函数的时候不会使用所有的样本数据，而是把大量数据分割成小块的数据(<strong>batch</strong>)，每个batch迭代一次，完成一轮遍历后记为一个<strong>epoch</strong>，一个epoch中有多少次迭代也是手动设置的超参</p>
-</blockquote>
-<p>  <img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018191229.png" srcset="/img/loading.gif" lazyload alt="20221018191229"></p>
+<li>local minima &amp; saddle point</li>
+<li><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025144426.png" srcset="/img/loading.gif" lazyload alt="20221025144426"></li>
+</ul>
+</li>
+<li><p>根据hessian来判断critical point的类型</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025150325.png" srcset="/img/loading.gif" lazyload alt="20221025150325"></p>
+<p>或观察H，H正定则local minima，负定则local maxima </p>
+</li>
+<li><p>对于saddle point，H对应的特征值必有正有负，根据负特征值求出对应特征向量，将此作为梯度进行下降即可（seldom used）</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221025151653.png" srcset="/img/loading.gif" lazyload alt="20221025151653"></p>
+</li>
+<li><p>可以通过转化到更高维空间的方式将local minima转化为saddle point</p>
 </li>
 </ul>
-<h2 id="再复杂一点……"><a href="#再复杂一点……" class="headerlink" title="再复杂一点……"></a>再复杂一点……</h2><p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221018192127.png" srcset="/img/loading.gif" lazyload alt="20221018192127"></p>
+<h3 id="batch"><a href="#batch" class="headerlink" title="batch"></a>batch</h3><ul>
+<li><p>对于所有的数据分为不同的batch，遍历所有batch称为一个epoch，用一个batch内的数据更新一次参数。</p>
+</li>
+<li><p>batch的size大小不同，训练的效果也不同。</p>
 <ul>
-<li>增加层数即可（层数也是超参 xs）</li>
+<li><p>结合了并行运算（parallel computing）的大尺寸batch梯度下降的训练结果更好，运行一个epoch的时间也相对更少。</p>
+<ul>
+<li>并行计算下，每个batch1笔数据和1000笔数据的运算时间基本相同。</li>
 </ul>
-<h2 id="Yeah-it’s-not-fancy-enough"><a href="#Yeah-it’s-not-fancy-enough" class="headerlink" title="Yeah, it’s not fancy enough"></a>Yeah, it’s not fancy enough</h2><p>所以起一个炫酷的名字：</p>
-<p><strong>神经网络</strong></p>
-<p>然而神经网络也被玩烂了怎么办捏？</p>
-<p>那就叫<strong>深度学习</strong>吧。</p>
-<p>下课！</p>
-
+</li>
+<li><p>小尺寸的batch在优化过程中不易陷入saddle point，从而获得更好的training和testing的结果。</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028180021.png" srcset="/img/loading.gif" lazyload alt="20221028180021"></p>
+</li>
+</ul>
+<h3 id="momentum"><a href="#momentum" class="headerlink" title="momentum"></a>momentum</h3><ul>
+<li><p>利用物理世界中的“惯性”来冲出saddle point。</p>
+</li>
+<li><p>每次下降的方向由计算出的梯度和上一次下降的方向共同决定。</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028180520.png" srcset="/img/loading.gif" lazyload alt="20221028180520"></p>
+</li>
+</ul>
+<h3 id="客制化的梯度下降（adaptive-learning-rate）"><a href="#客制化的梯度下降（adaptive-learning-rate）" class="headerlink" title="客制化的梯度下降（adaptive learning rate）"></a>客制化的梯度下降（adaptive learning rate）</h3><ul>
+<li><p>解决不同方向上梯度变化情况不同，导致一个单一的学习率无法适应所有方向的问题</p>
+</li>
+<li><p>对每一个参数的学习率进行修饰</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028195524.png" srcset="/img/loading.gif" lazyload alt="20221028195524"></p>
+</li>
+<li><p>σ使用之前所有梯度的均方根确定</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028200000.png" srcset="/img/loading.gif" lazyload alt="20221028200000"></p>
+</li>
+<li><p>确定σ的更好方法：RMSProp</p>
+<p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201019.png" srcset="/img/loading.gif" lazyload alt="20221028201019"></p>
+</li>
+</ul>
+<h3 id="learning-rate-scheduling"><a href="#learning-rate-scheduling" class="headerlink" title="learning rate scheduling"></a>learning rate scheduling</h3><ul>
+<li><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201749.png" srcset="/img/loading.gif" lazyload alt="20221028201749"></li>
+</ul>
+<h3 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h3><ul>
+<li><p><img src="https://raw.githubusercontent.com/EskildMK/ImageRepo4Blog/main/BLOG20221028201923.png" srcset="/img/loading.gif" lazyload alt="20221028201923"></p>
+</li>
+<li><p>momentum和客制化调整的是学习率的不同角度：</p>
+<ul>
+<li>momentum不仅考虑了之前所有学习率变化的大小，同时考虑了方向（矢量角度）</li>
+<li>客制化调整仅仅调整了学习率变化的大小（标量角度）</li>
+</ul>
+</li>
+</ul>
+<h2 id="Eg-数码宝贝分类器"><a href="#Eg-数码宝贝分类器" class="headerlink" title="Eg. 数码宝贝分类器"></a>Eg. 数码宝贝分类器</h2>
                 
               </div>
             
@@ -378,13 +389,6 @@
             <div>
               <div class="post-metas my-3">
   
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">#机器学习</a>
-      
-    </div>
   
 </div>
 
@@ -394,8 +398,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>机器学习 lecture1 基本概念</div>
-      <div>http://eskildmk.github.io/2022/10/17/机器学习-pt-1-基本概念/</div>
+      <div>机器学习-pt-2-深度学习</div>
+      <div>http://eskildmk.github.io/2022/10/25/机器学习-pt-2-深度学习/</div>
     </div>
     <div class="license-meta">
       
@@ -407,7 +411,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月17日</div>
+          <div>2022年10月25日</div>
         </div>
       
       
@@ -439,18 +443,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pt-2-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="机器学习-pt-2-深度学习">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">机器学习-pt-2-深度学习</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/14/my-test-post/" title="my-test-post">
-                        <span class="hidden-mobile">my-test-post</span>
+                      <a href="/2022/10/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pt-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="机器学习 lecture1 基本概念">
+                        <span class="hidden-mobile">机器学习 lecture1 基本概念</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
